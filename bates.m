@@ -90,10 +90,6 @@ dW_Y=rho.*dW_V + sqrt(1-(rho^2)).*randn(M,1);
 xprocess(:,1)=log_S0+(r-q-lambda_Q_Y*epsilon_P-0.5*V0)*dt+sqrt(V0).*dW_Y(:,1)+J_Y_process(:,1);
 vprocess(:,1)=V0+k*(theta-V0)*dt+sig_V*sqrt(V0*dt).*dW_V+J_V_process(:,1);
 
-
-
-%how do I avoid this circularity??
-
 %Monte carlo 
 for i=2:N
     %GBM
@@ -114,9 +110,6 @@ for i=2:N
 end
 price = exp(-r*T)*mean(max(0,exp(xprocess(:,N))-K))
 
-%%play a5ound with the paramets untill you get within a logical nbhd of the
-%%BSM
-%strat next with the valsicheck model
 end
 
 
