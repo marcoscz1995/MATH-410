@@ -1,4 +1,4 @@
-# MATH-410
+# Option Pricing with Monte Carlo Methods
 Details of the scripts.
 The codes were executed in R studio. 
 
