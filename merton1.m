@@ -10,11 +10,6 @@ function jumps
 %N: number of time steps per year
 %M: number of monte carlo trials
 
-
-%use parameters from that Amaya paper
-%try to find old paper of this 
-%play around with the parameters 
-
 N=252;
 M=1000;
 muJ=0;
@@ -46,7 +41,7 @@ end
 price=exp(-r*T)*mean(max(0,SNow-K))
 end
 
-%why is it giving such inconsistent prices?
+
 
     
 
